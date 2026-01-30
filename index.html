@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. P. Priakanth - Professional Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.5;
+            padding: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .page-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            position: relative;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .name-title h1 {
+            color: #2c3e50;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .name-title h2 {
+            color: #3498db;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        .contact-info {
+            text-align: right;
+            font-size: 0.9rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 4px;
+            color: #555;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 8px;
+            color: #3498db;
+            font-size: 1rem;
+        }
+        
+        .current-role {
+            background-color: #f1f8ff;
+            padding: 18px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .role-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .role-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+        
+        .role-period {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .role-organization {
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+        
+        .role-details li {
+            margin-bottom: 6px;
+            color: #555;
+            padding-left: 5px;
+            font-size: 0.95rem;
+        }
+        
+        .experience-summary {
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #e8f4fc;
+            color: #2c3e50;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid #d1e7ff;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 12px;
+        }
+        
+        .stat-box {
+            background-color: #f1f8ff;
+            border: 1px solid #d1e7ff;
+            padding: 12px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: #3498db;
+            font-weight: 500;
+        }
+        
+        .qualification-item {
+            margin-bottom: 10px;
+            padding: 8px 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            font-size: 0.95rem;
+        }
+        
+        .qualification-item h3 {
+            color: #2c3e50;
+            margin-bottom: 3px;
+            font-size: 1rem;
+        }
+        
+        .footer {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.85rem;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+                background-color: white;
+                font-size: 12pt;
+            }
+            
+            .page-container {
+                box-shadow: none;
+                padding: 20px;
+                margin: 0;
+                max-width: 100%;
+            }
+            
+            .header {
+                border-bottom: 2px solid #2c3e50;
+            }
+            
+            .tag {
+                page-break-inside: avoid;
+            }
+            
+            .stat-box {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .contact-info {
+                text-align: left;
+                margin-top: 10px;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-container {
+                padding: 20px;
+            }
+            
+            .name-title h1 {
+                font-size: 1.8rem;
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">
+            <div class="name-title">
+                <h1>Dr. P. Priakanth</h1>
+                <h2>Head, Zoho School for Advanced Study</h2>
+                <h2>Zoho Schools of Learning, Chennai</h2>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-university"></i> Zoho Schools of Learning</p>
+                <p><i class="fas fa-phone"></i> +91 8903718836</p>
+                <p><i class="fas fa-envelope"></i> priakanth.p@zohocorp.com</p>
+                <p><i class="fas fa-graduation-cap"></i>MCA, ME, PhD</p>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="left-column">
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-briefcase"></i> Current Role
+                    </div>
+                    
+                    <div class="current-role">
+                        <div class="role-header">
+                            <div class="role-title">Head of School for Advanced Study</div>
+                            <div class="role-period">Jun 2024 - Present</div>
+                        </div>
+                        <div class="role-organization">Zoho Schools of Learning</div>
+                        <div class="role-details">
+                            <ul>
+                                <li>Leads Zoho’s Honors Program, focused on developing future software architects through an interdisciplinary learning model.</li>
+                                <li>Designs and oversees a flexible curriculum enabling students to pursue multiple domains across Technology, Business, and Design.</li>
+                                <li>Defines and upholds rigorous academic standards for this highly selective program, with strong emphasis on self-directed learning and problem solving.</li>
+                                <li>Drives a strong project-based learning culture, where students apply learned knowledge to real-world, industry-relevant problems through hands-on projects.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-summary">
+                        <p><strong>Previous:</strong> Professor at Kongu Engineering College (Jun 1999 - Jun 2024)</p>
+                        <p><strong>Academic Leadership:</strong> 26+ years in education</p>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-chart-line"></i> Research and Publications
+                    </div>
+                    
+                    <div class="stats-container">
+                        <div class="stat-box">
+                            <span class="stat-number">26</span>
+                            <span class="stat-label">International Journal Publications</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">Authored Book</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Consultancy Projects</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Programs Organized</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-chart-line"></i> Notable Publication
+                    </div>
+                            <!-- <span class="stat-number">26</span> -->
+                            <p>"EWPS: Emergency Data Communication in the Internet of Medical Things" in the IEEE Internet of Things Journal (2021).</p>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-user-graduate"></i> Qualifications
+                    </div>
+                    
+                    <div class="qualification-item">
+                        <h3>PhD in Information and Communication Engineering</h3>
+                        <p>Adhoc & Wireless Sensor Networks</p>
+                    </div>
+                    
+                    <div class="qualification-item">
+                        <h3>M.E. (Master of Engineering)</h3>
+                        <p>Computer Science and Engineering</p>
+                    </div>
+                    
+                    <div class="qualification-item">
+                        <h3>MCA (Master of Computer Applications)</h3>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-cogs"></i> Expertise
+                    </div>
+                    
+                    <div class="tag-container">
+                        <span class="tag">AI/ML</span>
+                        <span class="tag">IoT Systems</span>
+                        
+                        <span class="tag">Adhoc Networks</span>
+                        <span class="tag">Sensor Networks</span>
+                        <span class="tag">Network Architect</span>
+                        <span class="tag">Software Architect</span>
+                        <span class="tag">Strategic Planner</span>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-tasks"></i> Key Achievements
+                    </div>
+                    
+                    <div class="role-details">
+                        <ul>
+                            <li>Crafting expertise through hands-on creation</li>
+                            <li>Published in international journals and conferences</li>
+                            <li>Led multiple research and consultancy projects</li>
+                            <li>Transitioned from 25-year academic to corporate education</li>
+                            <li>CCNA, CCNP, CCAI certified proffesional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Professional Profile | Dr. P. Priakanth</p>
+        </div>
+    </div>
+</body>
+</html>
